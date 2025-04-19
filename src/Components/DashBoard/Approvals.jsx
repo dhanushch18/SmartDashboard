@@ -24,19 +24,21 @@ const Approvals = () => {
   return (
     <Grid container spacing={1} mt={3}>
       <Grid item xs={12}>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Box display="flex" justifyContent="space-between" alignItems="center" gap={100}>
           <Typography variant="subtitle1" fontWeight={650}>
             General Approvals
           </Typography>
-          <Typography
-            variant="body2"
-            color="primary"
-            sx={{ cursor: "pointer", fontWeight: 500 }}
-          >
-            View All
-          </Typography>
-          <ArrowForwardIosIcon color="primary" fontSize="small"/>
-          
+
+          <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: "pointer" }}>
+            <Typography
+              variant="body2"
+              color="primary"
+              sx={{ fontWeight: 500 }}
+            >
+              View All
+            </Typography>
+            <ArrowForwardIosIcon color="primary" fontSize="small" />
+          </Box>
         </Box>
       </Grid>
       <Grid container spacing={1}>

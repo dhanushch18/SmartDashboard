@@ -4,20 +4,19 @@ import PeopleIcon from '@mui/icons-material/People';
 import TodayIcon from '@mui/icons-material/Today';
 import BusinessIcon from '@mui/icons-material/Business';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import RedDownArrow from '../../assets/DashBoard/RedDownArrow.png';
-import RedUpArrow from '../../assets/DashBoard/RedUpArrrow.png';
-import GreenUpArrow from '../../assets/DashBoard/GreenUpArrow.png';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 
 const cardData = [
-  { icon: <PeopleIcon color="primary" />, label: "Employees", value: 352, change: "+12%" },
-  { icon: <TodayIcon color="secondary" />, label: "Leaves Today", value: 23, change: "+6%" },
-  { icon: <BusinessIcon sx={{ color: '#ff9800' }} />, label: "No. of Branches", value: 63, change: "+6%" },
-  { icon: <AccessTimeIcon sx={{ color: '#9c27b0' }} />, label: "Average Hours", value: "7.5 /12", change: "+12%" },
+  { icon: <PeopleIcon color="secondary" />, label: "Employees", value: 352, change: "+12%",icon2: <TrendingUpIcon color="success" fontSize="small" /> },
+  { icon: <TodayIcon color="secondary" />, label: "Leaves Today", value: 23, change: "+6%", icon2: <TrendingUpIcon color="error" fontSize="small" /> },
+  { icon: <BusinessIcon color="secondary" />, label: "No. of Branches", value: 63, change: "+6%" ,icon2: <TrendingUpIcon color="success" fontSize="small" /> },
+  { icon: <AccessTimeIcon color='secondary'/>, label: "Average Hours", value: "7.5 /12", change: "+12%", icon2: <TrendingDownIcon color="error" fontSize="small" /> },
 ];
 
 const DashboardCards = () => {
   return (
-    <Grid container spacing={3} mt={1}>
+    <Grid container spacing={2.5} mt={1}>
       {cardData.map((card, index) => (
         <Grid item xs={12} sm={6} md={3} key={index}>
           <Paper elevation={0} sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
@@ -25,8 +24,17 @@ const DashboardCards = () => {
               {card.icon}
               <Typography variant="subtitle2">{card.label}</Typography>
             </Box>
+            <Box display="flex" alignItems="center" justifyContent={"center"} gap={2}>
             <Typography variant="h5" fontWeight={700}>{card.value}</Typography>
-            <Typography variant="caption" color="green">{card.change}</Typography>
+           <Box display="flex" alignItems="center" gap={1}>
+                <Typography variant="caption">
+                  {card.icon2}
+                </Typography>
+                <Typography variant="caption">
+                  {card.change}
+                </Typography>
+              </Box>
+            </Box>
           </Paper>
         </Grid>
       ))}

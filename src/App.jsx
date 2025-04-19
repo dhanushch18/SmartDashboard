@@ -65,10 +65,13 @@
 
 import AppRouter from "./screens/AppRouter/AppRouter";
 //import SignIn from "./screens/SignIn/SignIn";
+import ThemeContextProvider from "./context/ThemeContext";
 
 function App (){
   return(
+    <ThemeContextProvider>
     <AppRouter/>
+    </ThemeContextProvider>
   )
 }
 

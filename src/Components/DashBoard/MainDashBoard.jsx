@@ -1,7 +1,8 @@
 // MainDashBoard.jsx
-import React from "react";
+import React,{useContext} from "react";
 import { Box, CssBaseline, Grid, ThemeProvider } from "@mui/material";
-import theme from "../../theme"; 
+import theme,{darkTheme} from "../../theme"; 
+import { ColorModeContext } from "../../context/ThemeContext";
 import Header from "./Header";
 import DashboardCards from "./DashboardCards";
 import AttendanceChart from "./AttendanceChart";
@@ -13,9 +14,14 @@ import Sidebar from "./Sidebar";
 import UpcomingAction from "./UpcomingAction";
 import OverviewBox from "./OverviewBox";
 
+
 const MainDashBoard = () => {
+  const { mode } = useContext(ColorModeContext);
+
+  const selectedTheme = mode === "dark" ? darkTheme : theme;
+
   return (
-<ThemeProvider theme={theme}>
+<ThemeProvider theme={selectedTheme}>
   <CssBaseline />
   <Box sx={{ display: "flex" }}>
     <Sidebar />

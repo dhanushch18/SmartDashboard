@@ -8,7 +8,13 @@ const theme = createTheme({
       main: "#1976d2", // Blue
     },
     secondary: {
-      main: "#f50057", // Pink
+      main: "#F9A825", // Orange
+    },
+    error: {
+      main: "#FF7F7F", // Red
+    },
+    success: {
+      main: "#4CAF50", // Green
     },
     background: {
       default: "#f4f6f8", // Light gray background
@@ -42,5 +48,22 @@ const theme = createTheme({
     },
   },
 });
+
+export const darkTheme = createTheme({
+  palette: {
+    mode: "dark", // Set dark theme
+    primary: {
+      main: "#1976d2", // Blue
+    },
+    secondary: {
+      main: "#F9A825",//"#f50057", // orange
+    },
+    background: {
+      default: "#303030", // Dark background
+      paper: "#424242",   // Dark paper
+    },
+  },
+});
+
 
 export default theme;

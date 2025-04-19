@@ -14,7 +14,7 @@ const EmploymentStatusChart = () => {
 
   return (
     <Paper elevation={0} sx={{ p: 3, borderRadius: 1,width:350,hieght:260}}>
-      <Typography variant="subtitle1" fontWeight={700} color="#3E3E3E" mb={1}>
+      <Typography variant="body1" fontWeight={700}  mb={1}>
         Employment Status
       </Typography>
 
@@ -43,7 +43,7 @@ const EmploymentStatusChart = () => {
         <Typography variant="body2" fontWeight={700} color="text.secondary">
           Total
         </Typography>
-        <Typography variant="body2" fontSize={25} color="#2E2E2E">
+        <Typography variant="h6" fontSize={25} >
           {total}
         </Typography>
       </Box>
@@ -75,11 +75,11 @@ const EmploymentStatusChart = () => {
                   backgroundColor: item.color,
                 }}
               />
-              <Typography variant="caption" fontWeight={600} color="#333">
+              <Typography variant="caption" fontWeight={600}>
                 {item.name}
               </Typography>
             </Stack>
-            <Typography variant="subtitle2" fontWeight={700} color="#1a1a1a">
+            <Typography variant="subtitle2" fontWeight={700}>
               {item.value}
             </Typography>
             <Typography variant="caption" color="text.secondary">

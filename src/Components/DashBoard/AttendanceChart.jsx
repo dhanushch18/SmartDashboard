@@ -47,12 +47,12 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const AttendanceChart = () => {
   return (
-    <Paper elevation={0} sx={{ p: 2, mt: 2 ,width:339,height:241}}>
-      <Typography variant="h6" fontWeight={600}>
+    <Paper elevation={0} sx={{ p: 2, mt: 2 ,width:339,height:285}}>
+      <Typography variant="h6" fontWeight={600} mb={2}>
         Overall Attendance
       </Typography>
 
-      <ResponsiveContainer width="100%" height={220}>
+      <ResponsiveContainer width="100%" height={210}>
         <BarChart data={data} barSize={15}>
           <XAxis dataKey="month" />
           <YAxis hide />
@@ -63,7 +63,7 @@ const AttendanceChart = () => {
             fill="url(#colorUv)"
             activeBar={{ fill: "#007bff" }}
           >
-            <LabelList dataKey="attendance" position="top" fill="#333" />
+            <LabelList dataKey="attendance" position="top" />
           </Bar>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">

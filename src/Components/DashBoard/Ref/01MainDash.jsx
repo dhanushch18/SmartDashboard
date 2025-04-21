@@ -1,16 +1,16 @@
 // MainDashBoard.jsx
 import React from "react";
 import { Box, CssBaseline, Grid, ThemeProvider } from "@mui/material";
-import theme from "../../theme"; // Adjust the path if needed
-import Header from "./Header";
-import DashboardCards from "./DashboardCards";
-import AttendanceChart from "./AttendanceChart";
-import BranchAdmins from "./BranchAdmins";
-import EmploymentStatusChart from "./EmployeeStatusChart";
-import Approvals from "./Approvals";
-import FavAction from "./FavAction";
-import Sidebar from "./Sidebar";
-import UpcomingAction from "./UpcomingAction";
+import theme from "../../../theme"; // Adjust the path if needed
+import Header from "../../HomeScreen/Header";
+import DashboardCards from "../DashboardCards";
+import AttendanceChart from "../AttendanceChart";
+import BranchAdmins from "../BranchAdmins";
+import EmploymentStatusChart from "../EmployeeStatusChart";
+import Approvals from "../Approvals";
+import FavAction from "../FavAction";
+import Sidebar from "../Sidebar";
+import UpcomingAction from "../UpcomingAction";
 
 const MainDashBoard = () => {
   return (

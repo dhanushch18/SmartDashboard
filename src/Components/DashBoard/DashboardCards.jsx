@@ -19,7 +19,7 @@ const DashboardCards = () => {
     <Grid container spacing={2.5} mt={1}>
       {cardData.map((card, index) => (
         <Grid item xs={12} sm={6} md={3} key={index}>
-          <Paper elevation={0} sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <Paper elevation={0} sx={{ p: 1.9, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <Box display="flex" alignItems="center" gap={1}>
               {card.icon}
               <Typography variant="subtitle2">{card.label}</Typography>
@@ -33,7 +33,7 @@ const DashboardCards = () => {
                 <Typography variant="caption">
                   {card.change}
                 </Typography>
-              </Box>
+            </Box>
             </Box>
           </Paper>
         </Grid>

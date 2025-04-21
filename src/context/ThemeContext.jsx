@@ -1,6 +1,5 @@
 import React, { createContext, useState, useMemo, useEffect } from "react";
 
-// Create ColorModeContext
 export const ColorModeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
@@ -8,7 +7,6 @@ const ThemeContextProvider = ({ children }) => {
   const storedMode = localStorage.getItem("theme") || "light";
   const [mode, setMode] = useState(storedMode);
 
-  // Toggle color mode and save the preference to localStorage
   const toggleColorMode = () => {
     const newMode = mode === "light" ? "dark" : "light";
     setMode(newMode);

@@ -9,11 +9,12 @@ import {
   LabelList,
 } from "recharts";
 import { Paper, Typography, Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const data = [
   { month: "Jan", attendance: 200 },
   { month: "Feb", attendance: 260 },
-  { month: "Mar", attendance: 120 },
+  { month: "Mar", attendance: 170 },
   { month: "Apr", attendance: 190 },
   { month: "May", attendance: 249 },
   { month: "Jun", attendance: 270 },
@@ -22,11 +23,15 @@ const data = [
 ];
 
 const CustomTooltip = ({ active, payload, label }) => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+
   if (active && payload && payload.length) {
     return (
       <Box
         sx={{
-          backgroundColor: "white",
+         backgroundColor: isDark ? "#1e1e1e" : "#fff",
+         color: isDark ? "#fff" : "#000",
           border: "1px solid #ccc",
           borderRadius: 2,
           padding: "8px 12px",
@@ -47,13 +52,13 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const AttendanceChart = () => {
   return (
-    <Paper elevation={0} sx={{ p: 2, mt: 2 ,width:339,height:285}}>
+    <Paper elevation={0} sx={{ p: 2, mt: 1 ,width:339,height:285}}>
       <Typography variant="h6" fontWeight={600} mb={2}>
         Overall Attendance
       </Typography>
 
-      <ResponsiveContainer width="100%" height={210}>
-        <BarChart data={data} barSize={15}>
+      <ResponsiveContainer width="100%" height={220}>
+        <BarChart data={data} barSize={15} margin={{ top: 20 }}>
           <XAxis dataKey="month" />
           <YAxis hide />
           <Tooltip content={<CustomTooltip />} />

@@ -3,14 +3,14 @@ import React,{useContext} from "react";
 import { Box, CssBaseline, Grid, ThemeProvider } from "@mui/material";
 import theme,{darkTheme} from "../../theme"; 
 import { ColorModeContext } from "../../context/ThemeContext";
-import Header from "./Header";
+//import Header from "./Header";
 import DashboardCards from "./DashboardCards";
 import AttendanceChart from "./AttendanceChart";
 import BranchAdmins from "./BranchAdmins";
 import EmploymentStatusChart from "./EmployeeStatusChart";
 import Approvals from "./Approvals";
 import FavAction from "./FavAction";
-import Sidebar from "./Sidebar";
+//import Sidebar from "./Sidebar";
 import UpcomingAction from "./UpcomingAction";
 import OverviewBox from "./OverviewBox";
 
@@ -24,10 +24,10 @@ const MainDashBoard = () => {
 <ThemeProvider theme={selectedTheme}>
   <CssBaseline />
   <Box sx={{ display: "flex" }}>
-    <Sidebar />
+    {/* <Sidebar /> */}
 
-    <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
-      <Header />
+    <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
+      {/* <Header /> */}
       <OverviewBox />
 
       {/* Two-column layout */}

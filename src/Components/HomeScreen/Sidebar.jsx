@@ -19,6 +19,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
+import { useLocation, useNavigate } from "react-router-dom";
 import { ColorModeContext } from "../../context/ThemeContext";
 
 import hrLogo from "../../assets/hrLogo.png";
@@ -29,6 +30,16 @@ const drawerWidth = 240;
 const Sidebar = () => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const menuItems = [
+    { label: "Dashboard", icon: <DashboardIcon />, path: "/menu/dashboard" },
+    { label: "Employees", icon: <PeopleIcon />, path: "/menu/employees" },
+    { label: "Payroll", icon: <PaymentIcon />, path: "/menu/payroll" },
+    { label: "Reports", icon: <AssessmentIcon />, path: "/menu/reports" },
+    { label: "Setup", icon: <SettingsIcon />, path: "/menu/setup" },
+  ];
 
   return (
     <Drawer
@@ -49,52 +60,54 @@ const Sidebar = () => {
       <Box component="img" src={hrLogo} width="113px" sx={{ mt: -3, ml: 2, mb: 2 }} />
 
       <List>
-        <ListItem button sx={{ bgcolor: theme.palette.background.paper, my: 0.5, borderRadius: 1 }}>
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItem>
+        {menuItems.map((item) => {
+          const isActive = location.pathname === item.path;
 
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary="Employees" />
-        </ListItem>
-
-        <ListItem button>
-          <ListItemIcon>
-            <PaymentIcon />
-          </ListItemIcon>
-          <ListItemText primary="Payroll" />
-        </ListItem>
-
-        <ListItem button>
-          <ListItemIcon>
-            <AssessmentIcon />
-          </ListItemIcon>
-          <ListItemText primary="Reports" />
-        </ListItem>
-
-        <ListItem button>
-          <ListItemIcon>
-            <SettingsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Setup" />
-        </ListItem>
+          return (
+            <ListItem
+              key={item.label}
+              button
+              onClick={() => navigate(item.path)}
+              sx={{
+                backgroundColor: isActive
+                  ? theme.palette.mode === "light"
+                    ? "#ffffff"
+                    : "#2a2a2a"
+                  : "transparent",
+                borderRadius: 1,
+                mx: 1,
+                my: 0.5,
+                "&:hover": {
+                  backgroundColor: theme.palette.mode === "light" ? "#f5f5f5" : "#333",
+                },
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  color: isActive ? theme.palette.secondary.main : "inherit",
+                }}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText
+                primary={item.label}
+                sx={{
+                  color: isActive ? theme.palette.main : "inherit",
+                }}
+              />
+            </ListItem>
+          );
+        })}
       </List>
 
       <Box sx={{ flexGrow: 1 }} />
 
-      {/* Theme Toggle Button */}
       <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", p: 1 }}>
         <IconButton onClick={colorMode.toggleColorMode} color="inherit">
           {theme.palette.mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
         </IconButton>
       </Box>
 
-      {/* Footer */}
       <Box sx={{ p: 3, textAlign: "center" }}>
         <Box component="img" src={bankLogo} width={71} height={40} mb={1} />
         <Typography fontWeight={500}>Silicon IT Solutions</Typography>

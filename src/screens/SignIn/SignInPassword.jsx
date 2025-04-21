@@ -25,7 +25,7 @@ import {
         //   setLoading(true);
            try {
              await new Promise(resolve => setTimeout(resolve, 1500));
-             navigate("/dashboard");
+             navigate("/menu/dashboard");
            } finally {
            //  setLoading(false);
            }

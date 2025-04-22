@@ -18,11 +18,10 @@ import AssessmentIcon from "@mui/icons-material/Assessment";
 import SettingsIcon from "@mui/icons-material/Settings";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-
 import { useLocation, useNavigate } from "react-router-dom";
 import { ColorModeContext } from "../../context/ThemeContext";
-
-import hrLogo from "../../assets/hrLogo.png";
+//import hrLogo from "../../assets/hrLogo.png";
+import SmartHrLogo from "../../assets/DashBoard/smartHr.png"
 import bankLogo from "../../assets/bankLogo.png";
 
 const drawerWidth = 240;
@@ -57,8 +56,11 @@ const Sidebar = () => {
     >
       <Toolbar />
 
-      <Box component="img" src={hrLogo} width="113px" sx={{ mt: -3, ml: 2, mb: 2 }} />
-
+      <Box display="flex" alignItems="center" sx={{mt:-5, ml:3,mb:2}}>
+      <Box component="img" src={SmartHrLogo} width="26px" sx={{ mt: -0.5, mr: 1 }}
+    alt="SmartHR Logo" />
+      <Typography variant="h6" fontWeight={600}>SmartHR</Typography>
+      </Box>
       <List>
         {menuItems.map((item) => {
           const isActive = location.pathname === item.path;

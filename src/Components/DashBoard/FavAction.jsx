@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const FavAction = () => {
   return (
    <Grid item xs={12} sm={6} md={4}> 
-   <Paper elevation={0} sx={{ p: 2, mt: 2, width:339,height:99 }}>
+   <Paper elevation={1} sx={{ p: 2, mt: 2, width:339,height:99 }}>
      <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
       <Typography variant="h6" fontWeight={600}>Favourite Action </Typography>
       <Box display="flex" alignItems="center" gap={1}>

@@ -9,7 +9,7 @@ const admins = [
 
 const BranchAdmins = () => {
   return (
-    <Paper elevation={0} sx={{ p: 2, mt: 1,height:407,width:347,overflowY: 'auto'  }}>
+    <Paper elevation={1} sx={{ p: 2, mt: 1,height:407,width:347,overflowY: 'auto'  }}>
       <Box display="flex" justifyContent="space-between" alignItems="center">
       <Typography variant="h6" fontWeight={600}>Branch Level Admins</Typography>
       <Typography color="primary">View All</Typography>

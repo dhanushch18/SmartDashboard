@@ -5,24 +5,24 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#1976d2", // Blue
+      main: "#2D85E6", // Blue 1976d2
     },
     secondary: {
-      main: "#F9A825", // Orange
+      main: "#FDB814", // Orange F9A825
     },
     error: {
-      main: "#FF7F7F", // Red
+      main: "#E84D4D", // Red FF7F7F
     },
     success: {
-      main: "#4CAF50", // Green
+      main: "#2FAA35", // Green 4CAF50
     },
     background: {
-      default: "#f4f6f8", // Light gray background
+      default: "#fffff1", //now white ,Light gray background f4f6f8
       paper: "#ffffff",   // Card background
     },
   },
   typography: {
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+    fontFamily: "'Poppins', 'Helvetica', 'Arial', sans-serif",
     h6: {
       fontWeight: 600,
     },

@@ -52,7 +52,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const AttendanceChart = () => {
   return (
-    <Paper elevation={0} sx={{ p: 2, mt: 1 ,width:339,height:285}}>
+    <Paper elevation={1} sx={{ p: 2, mt: 1 ,width:339,height:285}}>
       <Typography variant="h6" fontWeight={600} mb={2}>
         Overall Attendance
       </Typography>

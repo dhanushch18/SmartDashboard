@@ -9,7 +9,7 @@ const UpcomingAction = () => {
   return (
    <Grid item xs={12} sm={6} md={4}> 
  
- <Paper  elevation={0} sx={{width: '350px',
+ <Paper  elevation={1} sx={{width: '350px',
     padding: '12px 16px', mt: 2,
   }}
  >

@@ -9,8 +9,8 @@ import {
     CircularProgress
   } from "@mui/material";
   import React, { useState } from "react";
-  import SignInFooter from "./SignInFooter";
-  import SignInHeader from "./SignInHeader";
+  import SignInFooter from "../SignInFooter";
+  import SignInHeader from "../SignInHeader";
   import * as Yup from "yup";
   import { Formik, Form, Field } from 'formik'; 
   import man from '../../assets/layer-1.png';

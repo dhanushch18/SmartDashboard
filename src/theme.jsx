@@ -59,8 +59,8 @@ export const darkTheme = createTheme({
       main: "#F9A825",//"#f50057", // orange
     },
     background: {
-      default: "#303030", // Dark background
-      paper: "#424242",   // Dark paper
+      default: "#000000", // Dark background (#000000)
+      paper: "#000000",   // Dark paper , if light dark (#424242)
     },
   },
 });

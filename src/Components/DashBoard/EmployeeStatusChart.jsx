@@ -13,8 +13,8 @@ const EmploymentStatusChart = () => {
   const total = data.reduce((acc, curr) => acc + curr.value, 0);
 
   return (
-    <Paper elevation={1} sx={{ p: 3, borderRadius: 1,width:350,hieght:260}}>
-      <Typography variant="body1" fontWeight={700}  mb={1}>
+    <Paper elevation={1} sx={{ p: 3, borderRadius: 1,width:350,height:268}}>
+      <Typography variant="body1" fontWeight={700}  mb={2}>
         Employment Status
       </Typography>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Paper, Typography, Grid, Avatar, Button, Box } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useTheme } from '@mui/material/styles';
 
 const approvals = [
   {
@@ -24,6 +25,8 @@ const approvals = [
 ];
 
 const Approvals = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <Grid container spacing={1} mt={3}>
       <Grid item xs={12}>
@@ -70,10 +73,12 @@ const Approvals = () => {
               <Typography mt={1}>Employee transfer from {app.transfer}</Typography>
               <Typography variant="body2" mt={1}><b>Initiated By</b> {app.by}</Typography>
               <Box display="flex" justifyContent="space-between" mt={2}>
-                <Button variant="contained" color="success" sx={{ textTransform: 'none' }}>Approve</Button>
-                <Button variant="contained" color="error" sx={{ textTransform: 'none' }}>Remark</Button>
+                <Button variant="contained" sx={{ textTransform: 'none',backgroundColor: isDark ? "#303030" : '#ECFFED', // inherit
+          color: '#2FAA35'}}>Approve</Button>
+                <Button variant="contained"  sx={{ textTransform: 'none',backgroundColor: isDark ? "#303030" : '#FFE9E9',
+          color: '#E84D4D'}}>Remark</Button>
               </Box>
-            </Paper>
+            </Paper>    
           </Grid>
         ))}
       </Grid>

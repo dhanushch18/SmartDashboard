@@ -50,6 +50,7 @@ import {
               top: 0,
               left: "60%",
               transform: "translateX(-50px)",
+              zIndex:1000
             }}
           />
   
@@ -58,7 +59,7 @@ import {
             sx={{
               display: "flex",
               position: "relative",
-              mt: 10,
+              mt: 4,
             }}
           >
 

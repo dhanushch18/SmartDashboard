@@ -1,5 +1,5 @@
 // Menu.jsx
-import React,{useContext} from "react";
+import React,{useContext,useEffect} from "react";
 import Sidebar from "../Components/HomeScreen/Sidebar";
 import Header from "../Components/HomeScreen/Header";
 import { Outlet } from "react-router-dom";
@@ -12,6 +12,10 @@ const Menu = () => {
     const { mode } = useContext(ColorModeContext);
 
     const selectedTheme = mode === "dark" ? darkTheme : theme;
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // to scroll top section at beginning 
+    }, []);
 
   return (
     <ThemeProvider theme={selectedTheme}>

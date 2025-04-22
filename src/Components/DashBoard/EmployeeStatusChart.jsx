@@ -51,11 +51,11 @@ const EmploymentStatusChart = () => {
         {data.map((item, i) => (
           <Paper
             key={i}
-            elevation={0}
+            elevation={1}
             sx={{
               px: 1,
               py: 0,
-              borderRadius: 2,
+              borderRadius: 1,
               minWidth: 100,
               textAlign: "center",
             }}
@@ -79,12 +79,14 @@ const EmploymentStatusChart = () => {
                 {item.name}
               </Typography>
             </Stack>
-            <Typography variant="subtitle2" fontWeight={700}>
-              {item.value}
+            <Stack direction="row" spacing={1} justifyContent="center" alignItems="center">
+            <Typography variant="subtitle2" fontWeight={700} fontSize={18}>
+              {item.value}  
             </Typography>
-            <Typography variant="caption" color="text.secondary">
+            <Typography variant="caption" color="text.secondary" fontSize={12}>
               {Math.round((item.value / total) * 100)}%
             </Typography>
+            </Stack>
           </Paper>
         ))}
       </Stack>

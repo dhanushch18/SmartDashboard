@@ -17,7 +17,8 @@ import {
   import bulb from '../../assets/bulb.png';
   import table from '../../assets/table.png';
   import { useNavigate } from "react-router-dom";
-  
+  //import axios from 'axios';
+    
   const SignInSchema = Yup.object().shape({
     userName: Yup.string().required("User Name is required"),
     orgId: Yup.string().required("Organisation ID is required")
@@ -36,6 +37,30 @@ import {
         setLoading(false);
       }
     };
+
+    // const handleSubmit = async (values) => {
+    //   setLoading(true);
+    //   try {
+    //     const response = await axios.get('http://localhost:5000/users', {
+    //       params: {
+    //         userName: values.userName,
+    //         orgId: values.orgId
+    //       }
+    //     });
+    
+    //     if (response.data.length > 0) {
+    //       console.log('Login success', response.data[0]);
+    //       navigate("/signIn-password");
+    //     } else {
+    //       alert("Invalid credentials");
+    //     }
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
+    
   
     return (
       <Box sx={{ bgcolor: "#fff9ef", minHeight: "100vh", width: "100%" }}>

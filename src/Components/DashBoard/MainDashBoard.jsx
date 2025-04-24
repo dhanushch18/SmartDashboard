@@ -187,7 +187,7 @@ const MainDashBoard = () => {
     <ThemeProvider theme={selectedTheme}>
       <CssBaseline />
       <Box sx={{ display: "flex", width: '100%' }}>
-        <Box component="main" sx={{ flexGrow: 1, width: '100%' }}>
+        <Box component="main" sx={{ flexGrow: 1, width: '100%',mt:-3 }}>
           <OverviewBox />
 
           {/* Responsive Layout Wrapper */}
@@ -211,7 +211,7 @@ const MainDashBoard = () => {
                     xs: "1fr",
                     sm: "2fr 1fr",
                   },
-                  gap: 2,
+                  gap: 1.5,
                   mt: 1,
                 }}
               >

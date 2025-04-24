@@ -24,10 +24,10 @@ const OverviewBox = () => {
       alignItems="center"
       sx={{ p: 2 }}
     >
-      <Typography variant="h6" fontWeight={600} ml={1}>
+      <Typography variant="h6" ml={1}>
         Quick Overview
       </Typography>
-      <Typography variant="body2" sx={{ mt: { xs: 1, sm: 0 } }}>
+      <Typography variant="h4" fontWeight={400} sx={{ mt: { xs: 1, sm: 0 } }}>
         Last log In : Apr 19, 2025 | 12:45 PM
       </Typography>
     </Box>

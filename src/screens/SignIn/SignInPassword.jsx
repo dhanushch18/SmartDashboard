@@ -12,9 +12,9 @@ import {
   import SignInHeader from "./SignInHeader"
   import  man from '../../assets/man.png';
   import bulb from '../../assets/bulb.png';
-//  import group2 from '../../assets/group-1985.png';
+  import table from '../../assets/table.png';
   import bankLogo from "../../assets/bankLogo.png";
-  import MainDashBoard from "../../Components/DashBoard/MainDashBoard";
+  import SignInFooter from "../../screens/SignIn/SignInFooter";
   import { useNavigate } from "react-router-dom";
   
    const SignInPassword = () => {
@@ -32,7 +32,7 @@ import {
          };
     return (
       <Box sx={{ bgcolor: "#fff9ef", minHeight: "100vh", width: "100%" }}>
-        <Container maxWidth="lg" sx={{ position: "relative", height: "130vh" }}>
+        <Container maxWidth="lg" sx={{ position: "relative", height: "100vh" }}>
           {/* Header */}
 
            <SignInHeader />
@@ -59,13 +59,14 @@ import {
             sx={{
               display: "flex",
               position: "relative",
-              mt: 4,
+              mt: 1,
             }}
           >
 
             {/* Left illustration */}
             <Box
               component="img"
+              mt={10}
               //src="https://c.animaapp.com/m9jiexp82Ittzg/img/layer-1.png"
                src={man}
               alt="Illustration"
@@ -82,10 +83,10 @@ import {
               elevation={2}
               sx={{
                 width: 400,
-                p: 3.75,
+                p: 1.75,
                 borderRadius: 2,
                 ml: -3,
-                mt: 3,
+                mt: 1,
                 position: "relative",
                 zIndex: 2,
                 bgcolor: "#ffffff",
@@ -104,7 +105,7 @@ import {
               transform: "translateX(-50px)",
             }}
           />
-              <Stack spacing={2.5} alignItems="center">
+              <Stack spacing={0.5} alignItems="center">
                 <Stack spacing={0.5} alignItems="center" width="100%">
                   <Typography
                     variant="h5"
@@ -240,20 +241,23 @@ import {
             {/* Right illustration */}
             <Box
               component="img"
-              src="https://c.animaapp.com/m9jiexp82Ittzg/img/group-1985.png"
+             // src="https://c.animaapp.com/m9jiexp82Ittzg/img/group-1985.png"
+              src={table}
               alt="Illustration"
               sx={{
                 width: 275,
                 height: 384,
                 position: "relative",
                 ml: 5,
-                mt: 3,
+                mt: 8,
               }}
             />
           </Box>
+
+          <SignInFooter />
   
           {/* Footer */}
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
@@ -263,7 +267,7 @@ import {
               width: "calc(100% - 48px)",
             }}
           >
-            <Stack direction="row" spacing={2.5}>
+            <Stack direction="row" spacing={2.5} >
               <Link
                 underline="hover"
                 color="#282828"
@@ -294,7 +298,7 @@ import {
             >
               Copyright © 2025, Silicon IT Solutions. All rights reserved.
             </Typography>
-          </Box>
+          </Box> */}
         </Container>
       </Box>
     );

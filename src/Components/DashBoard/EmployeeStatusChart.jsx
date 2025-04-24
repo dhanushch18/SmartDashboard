@@ -226,8 +226,7 @@ const EmploymentStatusChart = () => {
       }}
     >
       <Typography
-        variant="body1"
-        fontWeight={700}
+        variant="h6"
         mb={2}
         fontSize={{ xs: 14, sm: 16 }}
         textAlign="center"
@@ -310,8 +309,8 @@ const EmploymentStatusChart = () => {
             </Stack>
             <Stack direction="row" spacing={1} justifyContent="center" alignItems="center">
               <Typography
-                variant="subtitle2"
-                fontWeight={700}
+                variant="h2"
+                // fontWeight={700}
                 fontSize={{ xs: 16, sm: 18 }}
               >
                 {item.value}

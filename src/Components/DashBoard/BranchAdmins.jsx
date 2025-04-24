@@ -53,6 +53,7 @@ const admins = [
   "Brandon Mango",
   "Wilson Carder",
   "Marley Passaquindici",
+  "Karl Hughes"
 ];
 
 const BranchAdmins = () => {
@@ -88,7 +89,9 @@ const BranchAdmins = () => {
               <Avatar sx={{ mr: 1, ml: -1 }} />
               <ListItemText
                 primary={admin}
+                primaryTypographyProps={{ variant: "h4" }}
                 secondary="Asis. Manager | Kannur, South"
+                secondaryTypographyProps={{ variant: "h4", fontWeight:400 }}
               />
               <MailOutlineIcon color="primary" />
             </ListItem>

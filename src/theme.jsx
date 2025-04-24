@@ -25,6 +25,23 @@ const theme = createTheme({
     fontFamily: "'Poppins', 'Helvetica', 'Arial', sans-serif",
     h6: {
       fontWeight: 600,
+      fontSize: "14px",
+    },
+    h1 : {
+      fontWeight: 600,
+      fontSize: "16px",
+    },
+    h2 : {
+      fontWeight: 600,
+      fontSize: "18px",
+    },
+    h3 : {
+      fontWeight: 600,
+      fontSize: "24px",
+    },
+    h4 : {
+      fontWeight: 600,
+      fontSize: "12px",
     },
     subtitle2: {
       fontWeight: 500,
@@ -62,6 +79,35 @@ export const darkTheme = createTheme({
       default: "#000000", // Dark background (#000000)
       paper: "#000000",   // Dark paper , if light dark (#424242)
     },
+  },
+  typography: {
+    fontFamily: "'Poppins', 'Helvetica', 'Arial', sans-serif",
+    h6: {
+      fontWeight: 600,
+      fontSize: "14px",
+    },
+    h1 : {
+      fontWeight: 600,
+      fontSize: "16px",
+    },
+    h2 : {
+      fontWeight: 600,
+      fontSize: "18px",
+    },
+    h3 : {
+      fontWeight: 600,
+      fontSize: "24px",
+    },
+    h4 : {
+      fontWeight: 600,
+      fontSize: "12px",
+    },
+    subtitle2: {
+      fontWeight: 500,
+    },
+    subtitle1:{
+      fontWeight: 400,
+    }
   },
 });
 

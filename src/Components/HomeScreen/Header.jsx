@@ -166,8 +166,7 @@ const Header = () => {
           }}
         >
           <Typography
-            variant="h6"
-            fontWeight={600}
+            variant="h1"
             sx={{ mb: { xs: 1, sm: 0 } }}
           >
             {title}
@@ -184,7 +183,7 @@ const Header = () => {
           >
             <Box display="flex" alignItems="center" gap={1}>
               <CalendarTodayIcon fontSize="small" />
-              <Typography variant="body2" sx={{ display: { xs: "none", sm: "block" } }}>
+              <Typography variant="h4" sx={{ display: { xs: "none", sm: "block" } }}>
                 Apr 12, 2025 | 12:45 PM
               </Typography>
             </Box>

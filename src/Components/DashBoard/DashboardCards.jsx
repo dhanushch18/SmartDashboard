@@ -78,7 +78,7 @@ const DashboardCards = () => {
           >
             <Box display="flex" alignItems="center" gap={1}>
               {card.icon}
-              <Typography variant="subtitle2">{card.label}</Typography>
+              <Typography variant="h6" fontWeight={500}>{card.label}</Typography>
             </Box>
 
             <Box
@@ -88,12 +88,12 @@ const DashboardCards = () => {
               gap={2}
               flexDirection={{ xs: "column", sm: "row" }} // Stack on small screens, row on larger
             >
-              <Typography variant="h5" fontWeight={700}>
+              <Typography variant="h3" fontWeight={700}>
                 {card.value}
               </Typography>
               <Box display="flex" alignItems="center" gap={1}>
                 <Typography variant="caption">{card.icon2}</Typography>
-                <Typography variant="caption">{card.change}</Typography>
+                <Typography variant="h4" fontWeight={500}>{card.change}</Typography>
               </Box>
             </Box>
           </Paper>

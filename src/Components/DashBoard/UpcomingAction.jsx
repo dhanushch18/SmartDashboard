@@ -89,7 +89,7 @@ const UpcomingAction = () => {
         >
           <Box display="flex" alignItems="center" gap={1}>
             <Box component="img" src={Payroll} alt="payroll" sx={{ width: 30, height: 30 }} />
-            <Typography variant="body1" fontWeight={550}>
+            <Typography variant="h4">
               Payroll Processing Deadline
             </Typography>
           </Box>
@@ -108,7 +108,7 @@ const UpcomingAction = () => {
         >
           <Box display="flex" alignItems="center" gap={1}>
             <Box component="img" src={Month} alt="month" sx={{ width: 30, height: 30 }} />
-            <Typography variant="body1" fontWeight={550}>
+            <Typography variant="h4">
               Monthly Attendance Report
             </Typography>
           </Box>
@@ -126,7 +126,7 @@ const UpcomingAction = () => {
         >
           <Box display="flex" alignItems="center" gap={1}>
             <Box component="img" src={Employee} alt="Employee" sx={{ width: 30, height: 30 }} />
-            <Typography variant="body1" fontWeight={550}>
+            <Typography variant="h4">
               Update Branch Employment Lists
             </Typography>
           </Box>

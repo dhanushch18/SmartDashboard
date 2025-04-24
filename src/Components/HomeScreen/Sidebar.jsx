@@ -188,7 +188,7 @@ const Sidebar = () => {
             sx={{ mt: -0.5, mr: 1 }}
             alt="SmartHR Logo"
           />
-          <Typography variant="h6" fontWeight={600}>
+          <Typography variant="h2">
             SmartHR
           </Typography>
         </Box>
@@ -228,6 +228,7 @@ const Sidebar = () => {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.label}
+                  primaryTypographyProps={{variant:"h4"}}
                   sx={{
                     color: isActive ? theme.palette.secondary.main : "inherit",
                   }}
@@ -253,7 +254,7 @@ const Sidebar = () => {
 
         <Box sx={{ p: 3, textAlign: "center" }}>
           <Box component="img" src={bankLogo} width={71} height={40} mb={1} />
-          <Typography fontWeight={500}>Silicon IT Solutions</Typography>
+          <Typography fontSize={12} fontWeight={500}>Silicon IT Solutions</Typography>
         </Box>
       </Drawer>
     </Box>

@@ -18,7 +18,7 @@ const FavAction = () => {
       <Box display="flex"  justifyContent="space-between"  alignItems="center" gap={1}>
       <Box display="flex"  alignItems="center" gap={1}>
       <AccountBoxSharpIcon  color="warning" fontSize="medium"/>
-      <Typography variant="body2" fontWeight={550}>Add New Employee</Typography>
+      <Typography variant="h6">Add New Employee</Typography>
       </Box>
       <ArrowForwardIosIcon  fontSize="small"/>
       </Box>

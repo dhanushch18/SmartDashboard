@@ -42,7 +42,7 @@ const Approvals = () => {
   return (
     <Grid container spacing={1} mt={3}>
       <Grid item xs={12}>
-        <Box display="flex" justifyContent="space-between" alignItems="center" gap={105}>
+        <Box display="flex" justifyContent="space-between" alignItems="center" gap={100}>
           <Typography variant="subtitle1" fontWeight={650}>
             General Approvals
           </Typography>
@@ -62,12 +62,12 @@ const Approvals = () => {
       <Grid container spacing={1}>
         {approvals.map((app, i) => (
           <Grid item xs={12} md={6} lg={4} key={i}>
-            <Paper elevation={1} sx={{ p: 2, width: 350, height: 225 }} >
+            <Paper elevation={1} sx={{ p: 2, maxWidth: 343, maxHeight: 206 }} >
               <Box display="flex" alignItems="center" gap={2}>
                 <Avatar src={app.Avatar} />
                 <Box>
                   <Box display="flex" alignItems="center" gap={1}>
-                    <Typography variant="subtitle1" fontWeight={600}>{app.name}</Typography>
+                    <Typography variant="h4">{app.name}</Typography>
                     <Box
                       sx={{
                         backgroundColor: '#e0e0e0', px: 1.2, py: 0.2,
@@ -79,19 +79,19 @@ const Approvals = () => {
                       {app.id}
                     </Box>
                   </Box>
-                  <Typography variant="caption">Senior Manager | Kannur, South</Typography>
+                  <Typography variant="h4" fontWeight={400} mt={1}>Senior Manager | Kannur, South</Typography>
                 </Box>
               </Box>
-              <Typography mt={1}>Employee transfer from {app.transfer}</Typography>
+              <Typography variant="h4" mt={2}> <span style={{ fontWeight: 400 }}>Employee transfer from </span>{app.transfer}</Typography>
               {/* <Typography variant="body2" mt={1}><b>Initiated By</b>  <Avatar src={app.smallAvatar} /> {app.by}</Typography>
                */}
             <Box display="flex" alignItems="center" gap={1} mt={1}>
-              <Typography variant="body2" fontWeight={500}>Initiated By</Typography>
-              <Box display="flex" alignItems="center" ml={10} gap={1}>
-    <Avatar src={app.smallAvatar} sx={{ width: 24, height: 24 }} />
-    <Typography variant="body2">{app.by}</Typography>
-  </Box>
-  </Box>
+              <Typography variant="h4" fontWeight={500}>Initiated By</Typography>
+              <Box display="flex" alignItems="center" ml={8} gap={1}>
+                <Avatar src={app.smallAvatar} sx={{ width: 24, height: 24 }} />
+                <Typography variant="h4">{app.by}</Typography>
+              </Box>
+              </Box>
               <Box display="flex" justifyContent="space-between" mt={2}>
                 <Button variant="contained" sx={{ textTransform: 'none',backgroundColor: isDark ? "#303030" : '#ECFFED', // inherit
           color: '#2FAA35'}}>Approve</Button>
